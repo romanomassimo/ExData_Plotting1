@@ -24,7 +24,7 @@ ElcPowCon <- read.csv("household_power_consumption.txt", sep=";", stringsAsFacto
 a <-  ElcPowCon %>%
   mutate(Global_active_power=as.numeric(Global_active_power))
 
-png(filename="plot2.png", width = 480, height = 480)
+png(filename="plot1.png", width = 480, height = 480)
 hist(a$Global_active_power, xlab="Global Active Power (kilowatts)", main="Global Active Power",
      col="red")
 dev.off
