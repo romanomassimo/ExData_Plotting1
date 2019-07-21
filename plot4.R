@@ -1,7 +1,7 @@
 library(dplyr)
 
 # Download Zip File
-setwd("/Users/Mas/J&J/Coursera - Data Scientist Spec/4. Exploratory Data Analysis/WK1")
+setwd("wdpath")
 
 if (!file.exists("CourseraWK1.zip")){
   fileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
@@ -54,3 +54,5 @@ legend("topright",
 ## plot4
 a <-  mutate(a, Global_reactive_power=as.numeric(Global_reactive_power))
 plot(a$DateTime,a$Global_reactive_power, type="l", xlab = "datetime", ylab="Global_reactive_power")
+
+dev.off()
