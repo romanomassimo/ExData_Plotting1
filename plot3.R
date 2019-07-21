@@ -2,7 +2,7 @@
 library(dplyr)
 
 # Download Zip File
-setwd("/Users/Mas/J&J/Coursera - Data Scientist Spec/4. Exploratory Data Analysis/WK1")
+setwd("wdpath")
 
 if (!file.exists("CourseraWK1.zip")){
   fileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
