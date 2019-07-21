@@ -26,9 +26,9 @@ ElcPowCon$DateTime <- strptime(ElcPowCon$DateTime, format="%d/%m/%Y %H:%M:%S")
 
 # plot3
 a <-  ElcPowCon %>%
-  mutate(Sub_metering_1=as.numeric(Global_active_power)) %>%
-  mutate(Sub_metering_2=as.numeric(Global_active_power)) %>%
-  mutate(Sub_metering_3=as.numeric(Global_active_power))
+  mutate(Sub_metering_1=as.numeric(Sub_metering_1)) %>%
+  mutate(Sub_metering_2=as.numeric(Sub_metering_2)) %>%
+  mutate(Sub_metering_3=as.numeric(Sub_metering_3))
 
 png("plot3.png",width = 480, height = 480)
 plot(a$DateTime, a$Sub_metering_1, type = "l", xlab="", ylab="Energy sub metering", col="black")
